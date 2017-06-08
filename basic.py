@@ -32,7 +32,16 @@ def print_timeline():
         print "----------------------"
         print tweet.text
 
+def post_message():
+    api.update_status('@botsplash_ Checkout CLT bots and AI meetup at @industrycowork 6pm')
+    print('done updated status')
+
 
 # print_timeline()
+# print("========================================================")
 # print_followers()
-print_user('botsplash_')
+# print("========================================================")
+# print_user('botsplash_')
+# print("========================================================")
+post_message()
+print("========================================================")

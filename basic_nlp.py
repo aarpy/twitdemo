@@ -35,7 +35,9 @@ class MyStreamListener(tweepy.StreamListener):
 
         entities = document.analyze_entities()
         for entity in entities:
-            print("entity: %s" % entity)
+            mentions = ", ".join(['"%s"' % mention for mention in entity.mentions])
+            print("entity: %s; %s" % (entity.name, entity.entity_type))
+            print("   mentions: %s" % (mentions))
 
     def on_error(self, status_code):
         print "================="
